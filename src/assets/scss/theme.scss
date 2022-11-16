@@ -1,0 +1,97 @@
+// Useful: https://tailwindcss.com/docs/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  min-width: 320px;
+  @apply font-sans bg-neutral-50 w-full;
+}
+
+body.no-scroll {
+  @apply h-full w-full overflow-hidden;
+}
+
+.container {
+  max-width: 100%;
+}
+
+// Vue Transitions
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.toggle-slide-enter-active,
+.toggle-slide-leave-active {
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.toggle-slide-enter-from,
+.toggle-slide-leave-to {
+  height: 0;
+  transition: all 0.3s ease;
+}
+
+.slide-x-enter-active,
+.slide-x-leave-active {
+  transition: all 0.3s ease;
+}
+.slide-x-enter-from,
+.slide-x-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.slide-y-enter-active,
+.slide-y-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-y-enter-from,
+.slide-y-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.dialog-slide-enter-active,
+.dialog-slide-leave-active {
+  transition: all 0.3s ease;
+}
+
+.dialog-slide-enter-from,
+.dialog-slide-leave-to {
+  transform: translateY(100vh);
+}
+
+.label-slide-enter-active,
+.label-slide-leave-active {
+  transition: all 0.2s ease;
+}
+
+.label-slide-enter-from,
+.label-slide-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+// Vue List Transitions
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
